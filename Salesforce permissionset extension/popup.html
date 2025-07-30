@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salesforce Permission Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Salesforce Permission Manager</h2>
+
+    <!-- Permission Set Section -->
+    <div class="permission-section">
+      <label for="permissionSetSelect">Permission Set:</label>
+      <select id="permissionSetSelect">
+        <option value="">Loading permission sets...</option>
+      </select>
+    </div>
+    
+    <!-- Search Section -->
+    <div class="search-section">
+      <div class="search-group">
+        <label for="nameSearch">Search by Name:</label>
+        <input type="text" id="nameSearch" placeholder="Enter user name...">
+      </div>
+      <div class="search-group">
+        <label for="profileSearch">Search by Profile:</label>
+        <select id="profileSearch">
+          <option value="">All Profiles</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- User Selection Section -->
+    <div class="user-section">
+      <div class="user-header">
+        <h3>Select Users</h3>
+        <div class="select-controls">
+          <label class="select-all-label">
+            <input type="checkbox" id="selectAll">
+            <span>Select All</span>
+          </label>
+          <span id="selectedCount">(0 selected)</span>
+        </div>
+      </div>
+      
+      <div class="user-list-container">
+        <div id="userList" class="user-list"></div>
+      </div>
+    </div>
+
+    <!-- Action Section -->
+    <div class="action-section">
+      <button id="assignButton" class="assign-btn" disabled>
+        Assign Permission Set
+      </button>
+    </div>
+
+    <!-- Status Section -->
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
